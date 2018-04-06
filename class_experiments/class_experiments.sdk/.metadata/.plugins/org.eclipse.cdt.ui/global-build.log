@@ -1,0 +1,20 @@
+21:36:45 **** Incremental Build of configuration Debug for project csd_lab ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: `main-build'를 위해 할 일이 없습니다
+21:55:49 **** Incremental Build of configuration Debug for project csd_lab ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: `main-build'를 위해 할 일이 없습니다
+23:04:37 **** Incremental Build of configuration Debug for project csd_lab ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: `main-build'를 위해 할 일이 없습니다
+23:11:08 **** Incremental Build of configuration Debug for project csd_lab ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: `main-build'를 위해 할 일이 없습니다

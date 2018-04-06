@@ -1,0 +1,18 @@
+int csd_main()
+{
+	unsigned int * sw;
+	sw = (unsigned *)0x41210000;
+
+	int epoch = 0;
+	unsigned char aa = (*sw);
+
+	if (*sw) == 0x0
+			{
+		epoch = 0x10000000;
+
+			}
+
+	for (int i = 0; i < epoch; i++);
+
+	return 0;
+}

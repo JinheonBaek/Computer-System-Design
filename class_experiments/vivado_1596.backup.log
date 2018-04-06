@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Tue Mar 20 23:10:10 2018
+# Process ID: 1596
+# Current directory: C:/cose321/class_experiments
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9044 C:\cose321\class_experiments\class_experiments.xpr
+# Log file: C:/cose321/class_experiments/vivado.log
+# Journal file: C:/cose321/class_experiments\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/cose321/class_experiments/class_experiments.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/suhtw/Documents/KU/ESCA/teaching/aaa621_CSD/labs/aaa_soc/class_experiments' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.4/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 839.836 ; gain = 169.539
+launch_sdk -workspace C:/cose321/class_experiments/class_experiments.sdk -hwspec C:/cose321/class_experiments/class_experiments.sdk/soc_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/cose321/class_experiments/class_experiments.sdk -hwspec C:/cose321/class_experiments/class_experiments.sdk/soc_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 20 23:13:41 2018...

@@ -1,0 +1,1 @@
+uart_polling reflect data which is received to output fifo queue. 
