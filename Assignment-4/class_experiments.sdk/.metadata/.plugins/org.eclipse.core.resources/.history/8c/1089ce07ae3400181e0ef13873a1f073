@@ -1,0 +1,31 @@
+int csd_main()
+{
+	unsigned int * sw;
+	sw = (unsigned *)0x41210000;
+
+	long long epoch = 0;
+
+	if ((*sw) == 0x0)
+		epoch = 500000000;		// 1 second (패치 시간 포함)
+	else if ((*sw) == 0x1)
+		epoch = 400000000;
+	else if ((*sw) == 0x2)
+		epoch = 350000000;
+	else if ((*sw) == 0x4)
+		epoch = 300000000;
+	else if ((*sw) == 0x8)
+		epoch = 250000000;
+	else if ((*sw) == 0x10)
+		epoch = 200000000;
+	else if ((*sw) == 0x20)
+		epoch = 150000000;
+	else if ((*sw) == 0x40)
+		epoch = 100000000;
+	else if ((*sw) == 0x80)
+		epoch = 50000000;
+
+	for (int i = 0; i < epoch;)
+		i++;
+
+	return 0;
+}

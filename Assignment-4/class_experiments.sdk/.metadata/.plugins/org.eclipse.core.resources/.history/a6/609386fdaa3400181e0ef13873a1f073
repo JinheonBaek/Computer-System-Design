@@ -1,0 +1,13 @@
+int csd_main()
+{
+	unsigned int * sw;
+	sw = (unsigned *)0x41210000;
+
+
+	unsigned aa;
+	aa = (*sw);
+
+
+
+	return 0;
+}
