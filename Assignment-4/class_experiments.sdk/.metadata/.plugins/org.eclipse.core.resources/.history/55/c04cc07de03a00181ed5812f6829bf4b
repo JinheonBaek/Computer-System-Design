@@ -49,7 +49,6 @@ forever:
 	// read data and transmit it back to sender
 	ldreq r4, [r0]
 	streq r4, [r0]
-
 	mov r8, #0x0D
 	streqb r8, [r0]
 	mov r8, #0x0A

@@ -5,13 +5,6 @@
 
 .extern csd_main
 
-.data
-end_str:
-	.byte 0x0D
-	.byte 0x0A
-	.byte 0x00
-.text
-
 .align 8
 
 // Our interrupt vector table
@@ -49,13 +42,6 @@ forever:
 	// read data and transmit it back to sender
 	ldreq r4, [r0]
 	streq r4, [r0]
-
-	mov r8, #0x0D
-	streqb r8, [r0]
-	mov r8, #0x0A
-	streqb r8, [r0]
-	mov r8, #0x00
-	streqb r8, [r0]
 
 	stmfd sp!, {r0-r2}	// before call csd_main, using stack to save reuse variables
 	mov r0, r4			// before function call, set parameter

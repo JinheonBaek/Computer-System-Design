@@ -3013,3 +3013,267 @@ arm-none-eabi-size csd_lab.elf  |tee "csd_lab.elf.size"
   19992	   1172	  22568	  43732	   aad4	csd_lab.elf
 Finished building: csd_lab.elf.size
  
+12:48:25 **** Auto Build of configuration Debug for project csd_lab ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/csd_asm.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/csd_asm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../csd_lab_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/csd_asm.d" -MT"src/csd_asm.o" -o "src/csd_asm.o" "../src/csd_asm.S"
+../src/csd_asm.S:2:23: fatal error: uart_init.s: No such file or directory
+compilation terminated.
+make: *** [src/csd_asm.o] 오류 1
+12:48:32 **** Auto Build of configuration Debug for project csd_lab ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/csd_asm.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/csd_asm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../csd_lab_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/csd_asm.d" -MT"src/csd_asm.o" -o "src/csd_asm.o" "../src/csd_asm.S"
+Finished building: ../src/csd_asm.S
+ 
+Building file: ../src/uart_init.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/uart_init.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../csd_lab_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/uart_init.d" -MT"src/uart_init.o" -o "src/uart_init.o" "../src/uart_init.S"
+Finished building: ../src/uart_init.S
+ 
+Building target: csd_lab.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../csd_lab_bsp/ps7_cortexa9_0/lib -o "csd_lab.elf"  ./src/csd_asm.o ./src/csd_main.o ./src/csd_print.o ./src/uart_init.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: csd_lab.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size csd_lab.elf  |tee "csd_lab.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19992	   1172	  22568	  43732	   aad4	csd_lab.elf
+Finished building: csd_lab.elf.size
+ 
+12:48:48 **** Auto Build of configuration Debug for project csd_lab ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/csd_asm.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/csd_asm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../csd_lab_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/csd_asm.d" -MT"src/csd_asm.o" -o "src/csd_asm.o" "../src/csd_asm.S"
+Finished building: ../src/csd_asm.S
+ 
+Building file: ../src/uart_init.s
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/uart_init.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../csd_lab_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/uart_init.d" -MT"src/uart_init.o" -o "src/uart_init.o" "../src/uart_init.s"
+Finished building: ../src/uart_init.s
+ 
+Building target: csd_lab.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../csd_lab_bsp/ps7_cortexa9_0/lib -o "csd_lab.elf"  ./src/csd_asm.o ./src/csd_main.o ./src/csd_print.o ./src/uart_init.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/uart_init.o:C:\cose321\Assignment-4\class_experiments.sdk\csd_lab\Debug/../src/uart_init.s:1: undefined reference to `slcr_UART_RST_CTRL'
+./src/uart_init.o:C:\cose321\Assignment-4\class_experiments.sdk\csd_lab\Debug/../src/uart_init.s:5: undefined reference to `slcr_UART_CLK_CTRL'
+./src/uart_init.o:C:\cose321\Assignment-4\class_experiments.sdk\csd_lab\Debug/../src/uart_init.s:9: undefined reference to `uart_mode_reg0'
+./src/uart_init.o:C:\cose321\Assignment-4\class_experiments.sdk\csd_lab\Debug/../src/uart_init.s:13: undefined reference to `uart_Control_reg0'
+./src/uart_init.o:C:\cose321\Assignment-4\class_experiments.sdk\csd_lab\Debug/../src/uart_init.s:17: undefined reference to `uart_Baud_rate_gen_reg0'
+./src/uart_init.o:C:\cose321\Assignment-4\class_experiments.sdk\csd_lab\Debug/../src/uart_init.s:21: undefined reference to `uart_Baud_rate_divider_reg0'
+./src/uart_init.o:C:\cose321\Assignment-4\class_experiments.sdk\csd_lab\Debug/../src/uart_init.s:29: undefined reference to `uart_Modem_ctrl_reg0'
+./src/uart_init.o:C:\cose321\Assignment-4\class_experiments.sdk\csd_lab\Debug/../src/uart_init.s:32: undefined reference to `uart_Modem_sts_reg0'
+collect2.exe: error: ld returned 1 exit status
+make: *** [csd_lab.elf] 오류 1
+12:49:07 **** Auto Build of configuration Debug for project csd_lab ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/csd_asm.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/csd_asm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../csd_lab_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/csd_asm.d" -MT"src/csd_asm.o" -o "src/csd_asm.o" "../src/csd_asm.S"
+../src/uart_init.s: Assembler messages:
+../src/uart_init.s:3: Error: unexpected end of file in macro `uart_init' definition
+make: *** [src/csd_asm.o] 오류 1
+12:49:11 **** Auto Build of configuration Debug for project csd_lab ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/csd_asm.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/csd_asm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../csd_lab_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/csd_asm.d" -MT"src/csd_asm.o" -o "src/csd_asm.o" "../src/csd_asm.S"
+Finished building: ../src/csd_asm.S
+ 
+Building file: ../src/uart_init.s
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/uart_init.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../csd_lab_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/uart_init.d" -MT"src/uart_init.o" -o "src/uart_init.o" "../src/uart_init.s"
+Finished building: ../src/uart_init.s
+ 
+Building target: csd_lab.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../csd_lab_bsp/ps7_cortexa9_0/lib -o "csd_lab.elf"  ./src/csd_asm.o ./src/csd_main.o ./src/csd_print.o ./src/uart_init.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: csd_lab.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size csd_lab.elf  |tee "csd_lab.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19992	   1172	  22568	  43732	   aad4	csd_lab.elf
+Finished building: csd_lab.elf.size
+ 
+12:49:23 **** Auto Build of configuration Debug for project csd_lab ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/csd_asm.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/csd_asm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../csd_lab_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/csd_asm.d" -MT"src/csd_asm.o" -o "src/csd_asm.o" "../src/csd_asm.S"
+Finished building: ../src/csd_asm.S
+ 
+Building target: csd_lab.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../csd_lab_bsp/ps7_cortexa9_0/lib -o "csd_lab.elf"  ./src/csd_asm.o ./src/csd_main.o ./src/csd_print.o ./src/uart_init.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: csd_lab.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size csd_lab.elf  |tee "csd_lab.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19992	   1172	  22568	  43732	   aad4	csd_lab.elf
+Finished building: csd_lab.elf.size
+ 
+12:49:29 **** Auto Build of configuration Debug for project csd_lab ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/csd_asm.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/csd_asm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../csd_lab_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/csd_asm.d" -MT"src/csd_asm.o" -o "src/csd_asm.o" "../src/csd_asm.S"
+Finished building: ../src/csd_asm.S
+ 
+Building target: csd_lab.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../csd_lab_bsp/ps7_cortexa9_0/lib -o "csd_lab.elf"  ./src/csd_asm.o ./src/csd_main.o ./src/csd_print.o ./src/uart_init.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: csd_lab.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size csd_lab.elf  |tee "csd_lab.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19992	   1172	  22568	  43732	   aad4	csd_lab.elf
+Finished building: csd_lab.elf.size
+ 
+12:49:41 **** Incremental Build of configuration Debug for project csd_lab ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: `main-build'를 위해 할 일이 없습니다
+12:51:27 **** Auto Build of configuration Debug for project csd_lab ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/csd_asm.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/csd_asm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../csd_lab_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/csd_asm.d" -MT"src/csd_asm.o" -o "src/csd_asm.o" "../src/csd_asm.S"
+Finished building: ../src/csd_asm.S
+ 
+Building target: csd_lab.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../csd_lab_bsp/ps7_cortexa9_0/lib -o "csd_lab.elf"  ./src/csd_asm.o ./src/csd_main.o ./src/csd_print.o ./src/uart_init.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: csd_lab.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size csd_lab.elf  |tee "csd_lab.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19992	   1188	  22568	  43748	   aae4	csd_lab.elf
+Finished building: csd_lab.elf.size
+ 
+12:52:52 **** Auto Build of configuration Debug for project csd_lab ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/csd_asm.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/csd_asm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../csd_lab_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/csd_asm.d" -MT"src/csd_asm.o" -o "src/csd_asm.o" "../src/csd_asm.S"
+../src/csd_asm.S: Assembler messages:
+../src/csd_asm.S:52: Error: ARM register expected -- `streqb 0x0D,[r0]'
+../src/csd_asm.S:53: Error: ARM register expected -- `streqb 0x0A,[r0]'
+../src/csd_asm.S:54: Error: ARM register expected -- `streqb 0x00,[r0]'
+make: *** [src/csd_asm.o] 오류 1
+12:53:07 **** Auto Build of configuration Debug for project csd_lab ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/csd_asm.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/csd_asm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../csd_lab_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/csd_asm.d" -MT"src/csd_asm.o" -o "src/csd_asm.o" "../src/csd_asm.S"
+../src/csd_asm.S: Assembler messages:
+../src/csd_asm.S:52: Error: ARM register expected -- `streqb #0x0D,[r0]'
+../src/csd_asm.S:53: Error: ARM register expected -- `streqb #0x0A,[r0]'
+../src/csd_asm.S:54: Error: ARM register expected -- `streqb #0x00,[r0]'
+make: *** [src/csd_asm.o] 오류 1
+12:53:34 **** Auto Build of configuration Debug for project csd_lab ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/csd_asm.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/csd_asm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../csd_lab_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/csd_asm.d" -MT"src/csd_asm.o" -o "src/csd_asm.o" "../src/csd_asm.S"
+../src/csd_asm.S: Assembler messages:
+../src/csd_asm.S:53: Error: ARM register expected -- `streqb #0x0D,[r0]'
+../src/csd_asm.S:54: Error: ARM register expected -- `streqb #0x0A,[r0]'
+../src/csd_asm.S:55: Error: ARM register expected -- `streqb #0x00,[r0]'
+make: *** [src/csd_asm.o] 오류 1
+12:53:38 **** Auto Build of configuration Debug for project csd_lab ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/csd_asm.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/csd_asm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../csd_lab_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/csd_asm.d" -MT"src/csd_asm.o" -o "src/csd_asm.o" "../src/csd_asm.S"
+../src/csd_asm.S: Assembler messages:
+../src/csd_asm.S:54: Error: ARM register expected -- `streqb #0x0A,[r0]'
+../src/csd_asm.S:55: Error: ARM register expected -- `streqb #0x00,[r0]'
+make: *** [src/csd_asm.o] 오류 1
+12:54:01 **** Auto Build of configuration Debug for project csd_lab ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/csd_asm.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/csd_asm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../csd_lab_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/csd_asm.d" -MT"src/csd_asm.o" -o "src/csd_asm.o" "../src/csd_asm.S"
+Finished building: ../src/csd_asm.S
+ 
+Building target: csd_lab.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../csd_lab_bsp/ps7_cortexa9_0/lib -o "csd_lab.elf"  ./src/csd_asm.o ./src/csd_main.o ./src/csd_print.o ./src/uart_init.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: csd_lab.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size csd_lab.elf  |tee "csd_lab.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20248	   1188	  22568	  44004	   abe4	csd_lab.elf
+Finished building: csd_lab.elf.size
+ 
+12:54:09 **** Auto Build of configuration Debug for project csd_lab ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/csd_asm.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/csd_asm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../csd_lab_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/csd_asm.d" -MT"src/csd_asm.o" -o "src/csd_asm.o" "../src/csd_asm.S"
+Finished building: ../src/csd_asm.S
+ 
+Building target: csd_lab.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../csd_lab_bsp/ps7_cortexa9_0/lib -o "csd_lab.elf"  ./src/csd_asm.o ./src/csd_main.o ./src/csd_print.o ./src/uart_init.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: csd_lab.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size csd_lab.elf  |tee "csd_lab.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20248	   1188	  22568	  44004	   abe4	csd_lab.elf
+Finished building: csd_lab.elf.size
+ 
+12:54:14 **** Incremental Build of configuration Debug for project csd_lab ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: `main-build'를 위해 할 일이 없습니다
+12:55:29 **** Incremental Build of configuration Debug for project csd_lab ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: `main-build'를 위해 할 일이 없습니다
+12:56:41 **** Incremental Build of configuration Debug for project csd_lab ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: `main-build'를 위해 할 일이 없습니다
