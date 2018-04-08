@@ -1,0 +1,30 @@
+#include "uart_regs.h"
+
+.data
+string:
+	.ascii "Hello World!"
+	.byte 0x0D
+	.byte 0x0A
+	.byte 0x00
+
+.text
+
+.macro uart_print
+
+	bl uart_trans
+
+	ldr r0, =string
+
+TRANSMIT_loop:
+
+	ldr r1, =uart_Channel_sts_reg0
+	and r1, r1, #0x8
+	cmp r1, #0x8
+	bne TRANSMIT_loop
+
+	ldrb r2, [r0], #1
+	strb r2, [uart_TX_RX_FIFO0]
+	cmp r2, #0x00
+	bne TRANSMIT_loop
+
+.endm

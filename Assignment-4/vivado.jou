@@ -2,10 +2,10 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
 # IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
-# Start of session at: Sat Apr 07 22:49:18 2018
-# Process ID: 18628
+# Start of session at: Sun Apr 08 11:47:27 2018
+# Process ID: 16220
 # Current directory: C:/cose321/Assignment-4
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1944 C:\cose321\Assignment-4\class_experiments.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17440 C:\cose321\Assignment-4\class_experiments.xpr
 # Log file: C:/cose321/Assignment-4/vivado.log
 # Journal file: C:/cose321/Assignment-4\vivado.jou
 #-----------------------------------------------------------

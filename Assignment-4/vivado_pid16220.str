@@ -1,0 +1,99 @@
+/*
+
+Vivado v2016.4 (64-bit)
+SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+Process ID: 16220
+
+Current time: 	4/8/18 11:47:44 AM KST
+Time zone: 	Korea Standard Time (Asia/Seoul)
+
+OS: Windows 10
+Version: 10.0
+Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 2
+Default font: family=Gulim,name=±¼¸²,style=plain,size=12
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	C:/Xilinx/Vivado/2016.4/tps/win64/jre
+
+User name: 	Jinhe
+User home directory: C:/Users/Jinhe
+User working directory: C:/cose321/Assignment-4
+User country: 	KR
+User language: 	ko
+User locale: 	ko_KR
+
+RDI base root directory: C:/Xilinx/Vivado
+RDI data directory: C:/Xilinx/Vivado/2016.4/data
+RDI bin directory: C:/Xilinx/Vivado/2016.4/bin
+
+Vivado preferences path: C:/Users/Jinhe/AppData/Roaming/Xilinx/Vivado/2016.4/vivado.ini
+Vivado layouts directory: C:/Users/Jinhe/AppData/Roaming/Xilinx/Vivado/2016.4/layouts
+
+GUI allocated memory:	236 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 440 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\cose321\Assignment-4\class_experiments.xpr. Version: Vivado v2016.4 
+// bt:g (cd:JFrame):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// [GUI Memory]: 39 MB (+38275kb) [00:00:07]
+// [Engine Memory]: 430 MB (+299702kb) [00:00:07]
+// TclEventType: IP_LOCK_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 447 MB. GUI used memory: 31 MB. Current time: 4/8/18 11:47:46 AM KST
+// TclEventType: IP_LOCK_CHANGE
+// [Engine Memory]: 468 MB (+17334kb) [00:00:12]
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 41 MB (+272kb) [00:00:13]
+// [Engine Memory]: 527 MB (+37006kb) [00:00:13]
+// [GUI Memory]: 50 MB (+6748kb) [00:00:16]
+// [GUI Memory]: 57 MB (+5209kb) [00:00:17]
+// [Engine Memory]: 553 MB (+20kb) [00:00:18]
+// Tcl Message: open_project C:/cose321/Assignment-4/class_experiments.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/suhtw/Documents/KU/ESCA/teaching/aaa621_CSD/labs/aaa_soc/class_experiments' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.4/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 819.430 ; gain = 140.508 
+// Project name: class_experiments; location: C:/cose321/Assignment-4; part: xc7z020clg484-1
+// [GUI Memory]: 62 MB (+2633kb) [00:00:19]
+dismissDialog("Open Project"); // bt:g (cd:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // T:JideMenu (CommandMenuBar:CommandBar, cd:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Y:JMenu (JPopupMenu:JComponent, cd:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ab:JMenuItem (JPopupMenu:JComponent, cd:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // T:JideMenu (CommandMenuBar:CommandBar, cd:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa:q (cd:JFrame): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aa:q)
+dismissDialog("Launch SDK"); // aa:q (cd:JFrame)
+// Tcl Message: launch_sdk -workspace C:/cose321/Assignment-4/class_experiments.sdk -hwspec C:/cose321/Assignment-4/class_experiments.sdk/soc_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/cose321/Assignment-4/class_experiments.sdk -hwspec C:/cose321/Assignment-4/class_experiments.sdk/soc_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// [GUI Memory]: 67 MB (+1491kb) [00:01:59]
+// [GUI Memory]: 71 MB (+631kb) [00:03:39]
+// [GUI Memory]: 76 MB (+1303kb) [00:05:39]
+// [GUI Memory]: 81 MB (+977kb) [00:07:59]
+// [GUI Memory]: 85 MB (+34kb) [00:09:19]
+// [GUI Memory]: 90 MB (+649kb) [00:21:55]
+// HMemoryUtils.trashcanNow. Engine heap size: 568 MB. GUI used memory: 54 MB. Current time: 4/8/18 12:17:47 PM KST
+// [GUI Memory]: 95 MB (+957kb) [00:41:21]
+// [GUI Memory]: 101 MB (+821kb) [00:46:52]

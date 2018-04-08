@@ -1,0 +1,27 @@
+int csd_print()
+{
+	char str[] = "----------------- LED On Period -----------------\n";
+
+	unsigned int * uart_TX_RX_FIFO0;
+	uart_TX_RX_FIFO0 = (unsigned *)0xE001030;
+
+	unsigned int * uart_Channel_sts_reg0;
+	uart_Channel_sts_reg0 = (unsigned *)0xE00102C;
+
+	int is_tx_buffer_empty;
+
+	while(1)
+	{
+		if (uart_Channel_sts_reg0 && 0x8 == 1)
+			is_tx_buffer_empty = 0;
+		else
+			is_tx_buffer_empty = 1;
+
+		if (is_tx_buffer_empty == 0)
+		{
+
+		}
+	}
+
+	return 0;
+}
