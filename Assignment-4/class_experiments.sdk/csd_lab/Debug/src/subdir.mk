@@ -10,8 +10,7 @@ S_SRCS += \
 ../src/uart_init.s 
 
 C_SRCS += \
-../src/csd_main.c \
-../src/csd_print.c 
+../src/csd_main.c 
 
 S_UPPER_SRCS += \
 ../src/csd_asm.S 
@@ -19,15 +18,13 @@ S_UPPER_SRCS += \
 OBJS += \
 ./src/csd_asm.o \
 ./src/csd_main.o \
-./src/csd_print.o \
 ./src/uart_init.o 
 
 S_UPPER_DEPS += \
 ./src/csd_asm.d 
 
 C_DEPS += \
-./src/csd_main.d \
-./src/csd_print.d 
+./src/csd_main.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
