@@ -7,7 +7,8 @@ LD_SRCS += \
 ../src/lscript.ld 
 
 S_SRCS += \
-../src/uart_init.s 
+../src/uart_init.s \
+../src/uart_print.s 
 
 C_SRCS += \
 ../src/csd_main.c 
@@ -18,7 +19,8 @@ S_UPPER_SRCS += \
 OBJS += \
 ./src/csd_asm.o \
 ./src/csd_main.o \
-./src/uart_init.o 
+./src/uart_init.o \
+./src/uart_print.o 
 
 S_UPPER_DEPS += \
 ./src/csd_asm.d 

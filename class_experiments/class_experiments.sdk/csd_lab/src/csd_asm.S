@@ -1,6 +1,11 @@
 
 #define csd_LED_ADDR	0x41200000
 
+
+#include "uart_init.s"
+#include "uart_print.s"
+
+
 .extern csd_main
 
 .align 8
@@ -20,6 +25,13 @@ csd_entry:
 csd_reset:
 main:
 
+	uart_init // uart 초기화
+
+	uart_print // uart 프린트
+
+	uart_print // 재 호출
+
+/*
 	mov r0, #10
 	mov r1, #3
 	add r0, r0, r1
@@ -39,6 +51,12 @@ loop:
 	str r1, [r0]
 
 	bl csd_main
+
+
+	uart_init
+
+	bl uart_trans
+*/
 
 forever:
 	nop

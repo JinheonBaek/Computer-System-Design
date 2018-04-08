@@ -2,10 +2,10 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
 # IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
-# Start of session at: Tue Mar 27 17:32:46 2018
-# Process ID: 10616
+# Start of session at: Sun Apr 08 13:03:52 2018
+# Process ID: 16132
 # Current directory: C:/cose321/class_experiments
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18180 C:\cose321\class_experiments\class_experiments.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4040 C:\cose321\class_experiments\class_experiments.xpr
 # Log file: C:/cose321/class_experiments/vivado.log
 # Journal file: C:/cose321/class_experiments\vivado.jou
 #-----------------------------------------------------------
@@ -17,19 +17,10 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.4/data/ip'.
-open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 818.453 ; gain = 152.375
-open_bd_design {C:/cose321/class_experiments/class_experiments.srcs/sources_1/bd/soc/soc.bd}
-Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
-Adding cell -- xilinx.com:ip:axi_gpio:2.0 - leds
-Adding cell -- xilinx.com:ip:axi_gpio:2.0 - switches
-Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
-Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
-Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
-Successfully read diagram <soc> from BD file <C:/cose321/class_experiments/class_experiments.srcs/sources_1/bd/soc/soc.bd>
-open_bd_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 837.266 ; gain = 18.813
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 819.105 ; gain = 142.684
 launch_sdk -workspace C:/cose321/class_experiments/class_experiments.sdk -hwspec C:/cose321/class_experiments/class_experiments.sdk/soc_wrapper.hdf
 INFO: [Vivado 12-393] Launching SDK...
 INFO: [Vivado 12-417] Running xsdk -workspace C:/cose321/class_experiments/class_experiments.sdk -hwspec C:/cose321/class_experiments/class_experiments.sdk/soc_wrapper.hdf
 INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
 exit
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 27 17:44:37 2018...
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 08 15:12:15 2018...

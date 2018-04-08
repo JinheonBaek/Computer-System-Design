@@ -1,16 +1,10 @@
 #include "uart_regs.h"
 #include "uart_init.s"
+#include "uart_print.s"
 
 #define csd_LED_ADDR 0x41200000
 
 .extern csd_main
-
-.data
-end_str:
-	.byte 0x0D
-	.byte 0x0A
-	.byte 0x00
-.text
 
 .align 8
 
@@ -30,9 +24,13 @@ csd_entry:
 csd_reset:
 main:
 
+	// init uart
 	uart_init
 
-	// init
+	// init menu (print menu)
+	uart_print
+
+	// init variables
 	ldr r0, =uart_TX_RX_FIFO0
 	ldr r1, =uart_Channel_sts_reg0
 	ldr r2, =csd_LED_ADDR
@@ -51,25 +49,31 @@ forever:
 	streq r4, [r0]
 
 	// carriage return / line feed / null
-	mov r8, #0x0D
+	moveq r8, #0x0D
 	streqb r8, [r0]
-	mov r8, #0x0A
+	moveq r8, #0x0A
 	streqb r8, [r0]
-	mov r8, #0x00
+	moveq r8, #0x00
 	streqb r8, [r0]
 
-	stmfd sp!, {r0-r2}	// before call csd_main, using stack to save reuse variables
+	// print_menu
+	stmfd sp!, {r0-r4}	// before call uart_print, using stack to save reusable variables
+	uart_print
+	ldmfd sp!, {r0-r4}	// after call uart_print, loading variables from stack
+
+	// Duration control
+	stmfd sp!, {r0-r2}	// before call csd_main, using stack to save reusable variables
 	mov r0, r4			// before function call, set parameter
 	bl csd_main
 	ldmfd sp!, {r0-r2}	// after call csd_main, loading variables from stack
 
+	// LED control
 	strb r5, [r2]				// Turn on next LED
 	lsl r5, r5, #1				// logical shift left by 1
 	cmp r5, #0x100				// compare
 	moveq r5, #0x1				// reset LED if compare condition is true
 
 	b forever
-
 
 .data
 .align 4
