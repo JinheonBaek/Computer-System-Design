@@ -1,4 +1,4 @@
-21:34:53 **** Build of project csd_lab_bsp ****
+01:26:38 **** Build of project csd_lab_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_3/src"
 C:/Xilinx/SDK/2016.4/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles"
@@ -68,5 +68,5 @@ C:/Xilinx/SDK/2016.4/gnuwin/bin/make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s
 "Compiling xadcps"
 'Finished building libraries'
 
-21:36:17 Build Finished (took 1m:23s.316ms)
+01:27:53 Build Finished (took 1m:14s.679ms)
 

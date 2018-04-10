@@ -1,0 +1,66 @@
+.macro debug_macro
+    bl reg_push
+.endm
+
+// push all registers (r0-r15 and CPSR) to stack
+reg_push:
+
+	// save r1 register value to stack for using that register to store address of macro_reg_space
+	stmfd sp!, {r1}
+	ldr r1, =macro_reg_space
+
+	// store r0 register value
+	stmia r1!, {r0}			// r0 value to macro_reg_space
+	mov r0, r1				// move address of macro_reg_space from r1 register to r0
+	ldmfd sp!, {r1}			// load r1 register value from stack
+
+	// store r1-r15 register value
+	stmia r0!, {r1-r15}		// store r1 to r15 register in macro_reg_space
+
+	// store cpsr register value
+	mrs r1, cpsr			// load cpsr register value to r1 register
+	stmia r0!, {r1}			// store cpsre register in macro_reg_space
+
+	// loop reg_pop_one 17 times (r0-r15, cpsr register)
+	ldr r0, =macro_reg_space	// init macro_reg_space to r0 register again
+	mov r1, #1
+
+
+// pop register from stack one by one
+reg_pop_one:
+	// sub iteration variable to 1
+	sub r1, r1, #1
+	cmp r1, #0
+
+	// load register value from macro_reg_space
+	ldmia r0!, {r2}
+
+	// call print function to print register to tera-term
+	mov r3, #8
+	b print
+
+print_end:
+	// if iteration end, return to original routine (at the point call macro program)
+    moveq pc, lr
+
+	//	if iteration does not end, return to reg_pop_one
+	b reg_pop_one
+
+// print register to tera-term through Tx FIFO
+print:
+	// sub iteration variable to 1
+	sub r3, r3, #1
+	cmp r3, #0
+
+	mov r4, #0xF0000000
+
+	// if iteration end, return to prior routine (reg_pop_one)
+	b print_end
+
+	// if iteration does not end, return to the print
+	b print
+
+
+
+
+macro_reg_space:	.space 1024

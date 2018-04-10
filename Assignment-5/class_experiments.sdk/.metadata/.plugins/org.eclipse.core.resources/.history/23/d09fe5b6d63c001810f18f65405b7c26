@@ -1,0 +1,40 @@
+.macro debug_macro
+    bl reg_push
+.endm
+
+// push all registers (r0-r15 and CPSR) to stack
+reg_push:
+
+	// save r1 register value to stack for using that register to store address of macro_reg_space
+	stmfd sp!, {r1}
+	ldr r1, =macro_reg_space
+
+	// store r0 register value
+	stmia r1!, {r0}			// r0 value to macro_reg_space
+	mov r0, r1				// move address of macro_reg_space from r1 register to r0
+	ldmfd sp!, {r1}			// load r1 register value from stack
+
+	// store r1-r15 register value
+	stmia r0!, {r1-r15}		// store r1 to r15 register in macro_reg_space
+
+	// store cpsr register value
+	mrs r1, cpsr			// load cpsr register value to r1 register
+	stmia r0!, {r1}			// store cpsre register in macro_reg_space
+
+	mov r0, #16
+
+// pop register from stack one by one
+reg_pop_one:
+	cmp r0, #0
+
+	//
+	bne reg_pop_one
+
+	// return to original routine (exists macro program0
+    moveq pc, lr
+
+
+// print register to tera-term through Tx FIFO
+print:
+
+macro_reg_space:	.space 1024

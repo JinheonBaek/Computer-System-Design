@@ -1,3 +1,5 @@
+#include "uart_regs.h"
+#include "uart_init.s"
 #include "debug_macro.s"
 
 #define csd_LED_ADDR	0x41200000
@@ -20,6 +22,8 @@ csd_entry:
 .global main
 csd_reset:
 main:
+
+	uart_init
 
 	mov r0, #32			// init outer loop count value
 	mov r1, #0			// init inner loop count value
