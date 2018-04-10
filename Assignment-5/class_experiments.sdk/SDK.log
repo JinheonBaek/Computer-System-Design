@@ -1800,3 +1800,433 @@ con
 
 01:21:14 INFO  : Launch script is exported to file 'C:\cose321\Assignment-5\class_experiments.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_csd_lab.elf_on_local.tcl'
 01:22:21 INFO  : Disconnected from the channel tcfchan#8.
+01:33:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:33:16 INFO  : Jtag cable 'Digilent Zed 210248A39B69' is selected.
+01:33:16 INFO  : 'jtag frequency' command is executed.
+01:33:16 INFO  : Sourcing of 'C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:33:16 INFO  : Context for 'APU' is selected.
+01:33:16 INFO  : System reset is completed.
+01:33:19 INFO  : 'after 3000' command is executed.
+01:33:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39B69" && level==0} -index 1' command is executed.
+01:33:23 INFO  : FPGA configured successfully with bitstream "C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/soc_wrapper.bit"
+01:33:23 INFO  : Context for 'APU' is selected.
+01:33:23 INFO  : Hardware design information is loaded from 'C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/system.hdf'.
+01:33:23 INFO  : Context for 'APU' is selected.
+01:33:24 INFO  : 'ps7_init' command is executed.
+01:33:24 INFO  : 'ps7_post_config' command is executed.
+01:33:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:33:25 INFO  : The application 'C:/cose321/Assignment-5/class_experiments.sdk/csd_lab/Debug/csd_lab.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:33:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39B69" && level==0} -index 1
+fpga -file C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/soc_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+loadhw C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+dow C:/cose321/Assignment-5/class_experiments.sdk/csd_lab/Debug/csd_lab.elf
+----------------End of Script----------------
+
+01:33:25 INFO  : Memory regions updated for context APU
+01:33:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:33:26 INFO  : 'con' command is executed.
+01:33:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+con
+----------------End of Script----------------
+
+01:33:26 INFO  : Launch script is exported to file 'C:\cose321\Assignment-5\class_experiments.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_csd_lab.elf_on_local.tcl'
+01:34:50 INFO  : Disconnected from the channel tcfchan#9.
+01:35:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:35:31 INFO  : Jtag cable 'Digilent Zed 210248A39B69' is selected.
+01:35:31 INFO  : 'jtag frequency' command is executed.
+01:35:31 INFO  : Sourcing of 'C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:35:31 INFO  : Context for 'APU' is selected.
+01:35:31 INFO  : System reset is completed.
+01:35:34 INFO  : 'after 3000' command is executed.
+01:35:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39B69" && level==0} -index 1' command is executed.
+01:35:38 INFO  : FPGA configured successfully with bitstream "C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/soc_wrapper.bit"
+01:35:39 INFO  : Context for 'APU' is selected.
+01:35:39 INFO  : Hardware design information is loaded from 'C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/system.hdf'.
+01:35:39 INFO  : Context for 'APU' is selected.
+01:35:40 INFO  : 'ps7_init' command is executed.
+01:35:40 INFO  : 'ps7_post_config' command is executed.
+01:35:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:35:40 INFO  : The application 'C:/cose321/Assignment-5/class_experiments.sdk/csd_lab/Debug/csd_lab.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:35:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39B69" && level==0} -index 1
+fpga -file C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/soc_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+loadhw C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+dow C:/cose321/Assignment-5/class_experiments.sdk/csd_lab/Debug/csd_lab.elf
+----------------End of Script----------------
+
+01:35:40 INFO  : Memory regions updated for context APU
+01:35:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:35:40 INFO  : 'con' command is executed.
+01:35:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+con
+----------------End of Script----------------
+
+01:35:40 INFO  : Launch script is exported to file 'C:\cose321\Assignment-5\class_experiments.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_csd_lab.elf_on_local.tcl'
+01:36:14 INFO  : Disconnected from the channel tcfchan#10.
+01:42:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:42:29 INFO  : Jtag cable 'Digilent Zed 210248A39B69' is selected.
+01:42:29 INFO  : 'jtag frequency' command is executed.
+01:42:29 INFO  : Sourcing of 'C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:42:29 INFO  : Context for 'APU' is selected.
+01:42:29 INFO  : System reset is completed.
+01:42:32 INFO  : 'after 3000' command is executed.
+01:42:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39B69" && level==0} -index 1' command is executed.
+01:42:37 INFO  : FPGA configured successfully with bitstream "C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/soc_wrapper.bit"
+01:42:37 INFO  : Context for 'APU' is selected.
+01:42:37 INFO  : Hardware design information is loaded from 'C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/system.hdf'.
+01:42:37 INFO  : Context for 'APU' is selected.
+01:42:38 INFO  : 'ps7_init' command is executed.
+01:42:38 INFO  : 'ps7_post_config' command is executed.
+01:42:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:42:38 INFO  : The application 'C:/cose321/Assignment-5/class_experiments.sdk/csd_lab/Debug/csd_lab.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:42:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39B69" && level==0} -index 1
+fpga -file C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/soc_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+loadhw C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+dow C:/cose321/Assignment-5/class_experiments.sdk/csd_lab/Debug/csd_lab.elf
+----------------End of Script----------------
+
+01:42:39 INFO  : Memory regions updated for context APU
+01:42:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:42:39 INFO  : 'con' command is executed.
+01:42:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+con
+----------------End of Script----------------
+
+01:42:39 INFO  : Launch script is exported to file 'C:\cose321\Assignment-5\class_experiments.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_csd_lab.elf_on_local.tcl'
+01:43:52 INFO  : Disconnected from the channel tcfchan#11.
+01:44:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:44:39 INFO  : Jtag cable 'Digilent Zed 210248A39B69' is selected.
+01:44:39 INFO  : 'jtag frequency' command is executed.
+01:44:39 INFO  : Sourcing of 'C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:44:39 INFO  : Context for 'APU' is selected.
+01:44:39 INFO  : System reset is completed.
+01:44:42 INFO  : 'after 3000' command is executed.
+01:44:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39B69" && level==0} -index 1' command is executed.
+01:44:46 INFO  : FPGA configured successfully with bitstream "C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/soc_wrapper.bit"
+01:44:46 INFO  : Context for 'APU' is selected.
+01:44:46 INFO  : Hardware design information is loaded from 'C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/system.hdf'.
+01:44:46 INFO  : Context for 'APU' is selected.
+01:44:47 INFO  : 'ps7_init' command is executed.
+01:44:47 INFO  : 'ps7_post_config' command is executed.
+01:44:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:44:48 INFO  : The application 'C:/cose321/Assignment-5/class_experiments.sdk/csd_lab/Debug/csd_lab.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:44:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39B69" && level==0} -index 1
+fpga -file C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/soc_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+loadhw C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+dow C:/cose321/Assignment-5/class_experiments.sdk/csd_lab/Debug/csd_lab.elf
+----------------End of Script----------------
+
+01:44:48 INFO  : Memory regions updated for context APU
+01:44:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:44:48 INFO  : 'con' command is executed.
+01:44:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+con
+----------------End of Script----------------
+
+01:44:48 INFO  : Launch script is exported to file 'C:\cose321\Assignment-5\class_experiments.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_csd_lab.elf_on_local.tcl'
+01:45:20 INFO  : Disconnected from the channel tcfchan#12.
+01:45:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:45:37 INFO  : Jtag cable 'Digilent Zed 210248A39B69' is selected.
+01:45:37 INFO  : 'jtag frequency' command is executed.
+01:45:37 INFO  : Sourcing of 'C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:45:37 INFO  : Context for 'APU' is selected.
+01:45:37 INFO  : System reset is completed.
+01:45:40 INFO  : 'after 3000' command is executed.
+01:45:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39B69" && level==0} -index 1' command is executed.
+01:45:44 INFO  : FPGA configured successfully with bitstream "C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/soc_wrapper.bit"
+01:45:44 INFO  : Context for 'APU' is selected.
+01:45:44 INFO  : Hardware design information is loaded from 'C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/system.hdf'.
+01:45:44 INFO  : Context for 'APU' is selected.
+01:45:45 INFO  : 'ps7_init' command is executed.
+01:45:45 INFO  : 'ps7_post_config' command is executed.
+01:45:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:45:46 INFO  : The application 'C:/cose321/Assignment-5/class_experiments.sdk/csd_lab/Debug/csd_lab.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:45:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39B69" && level==0} -index 1
+fpga -file C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/soc_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+loadhw C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+dow C:/cose321/Assignment-5/class_experiments.sdk/csd_lab/Debug/csd_lab.elf
+----------------End of Script----------------
+
+01:45:46 INFO  : Memory regions updated for context APU
+01:45:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:45:46 INFO  : 'con' command is executed.
+01:45:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+con
+----------------End of Script----------------
+
+01:45:46 INFO  : Launch script is exported to file 'C:\cose321\Assignment-5\class_experiments.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_csd_lab.elf_on_local.tcl'
+01:48:31 INFO  : Disconnected from the channel tcfchan#13.
+01:49:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:49:08 INFO  : Jtag cable 'Digilent Zed 210248A39B69' is selected.
+01:49:08 INFO  : 'jtag frequency' command is executed.
+01:49:08 INFO  : Sourcing of 'C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:49:08 INFO  : Context for 'APU' is selected.
+01:49:09 INFO  : System reset is completed.
+01:49:12 INFO  : 'after 3000' command is executed.
+01:49:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39B69" && level==0} -index 1' command is executed.
+01:49:16 INFO  : FPGA configured successfully with bitstream "C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/soc_wrapper.bit"
+01:49:16 INFO  : Context for 'APU' is selected.
+01:49:16 INFO  : Hardware design information is loaded from 'C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/system.hdf'.
+01:49:16 INFO  : Context for 'APU' is selected.
+01:49:17 INFO  : 'ps7_init' command is executed.
+01:49:17 INFO  : 'ps7_post_config' command is executed.
+01:49:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:49:17 INFO  : The application 'C:/cose321/Assignment-5/class_experiments.sdk/csd_lab/Debug/csd_lab.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:49:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39B69" && level==0} -index 1
+fpga -file C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/soc_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+loadhw C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+dow C:/cose321/Assignment-5/class_experiments.sdk/csd_lab/Debug/csd_lab.elf
+----------------End of Script----------------
+
+01:49:17 INFO  : Memory regions updated for context APU
+01:49:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:49:17 INFO  : 'con' command is executed.
+01:49:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+con
+----------------End of Script----------------
+
+01:49:17 INFO  : Launch script is exported to file 'C:\cose321\Assignment-5\class_experiments.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_csd_lab.elf_on_local.tcl'
+01:49:54 INFO  : Disconnected from the channel tcfchan#14.
+01:50:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:50:11 INFO  : Jtag cable 'Digilent Zed 210248A39B69' is selected.
+01:50:11 INFO  : 'jtag frequency' command is executed.
+01:50:11 INFO  : Sourcing of 'C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:50:11 INFO  : Context for 'APU' is selected.
+01:50:11 INFO  : System reset is completed.
+01:50:14 INFO  : 'after 3000' command is executed.
+01:50:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39B69" && level==0} -index 1' command is executed.
+01:50:18 INFO  : FPGA configured successfully with bitstream "C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/soc_wrapper.bit"
+01:50:18 INFO  : Context for 'APU' is selected.
+01:50:18 INFO  : Hardware design information is loaded from 'C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/system.hdf'.
+01:50:18 INFO  : Context for 'APU' is selected.
+01:50:19 INFO  : 'ps7_init' command is executed.
+01:50:19 INFO  : 'ps7_post_config' command is executed.
+01:50:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:50:19 INFO  : The application 'C:/cose321/Assignment-5/class_experiments.sdk/csd_lab/Debug/csd_lab.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:50:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39B69" && level==0} -index 1
+fpga -file C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/soc_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+loadhw C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+dow C:/cose321/Assignment-5/class_experiments.sdk/csd_lab/Debug/csd_lab.elf
+----------------End of Script----------------
+
+01:50:19 INFO  : Memory regions updated for context APU
+01:50:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:50:19 INFO  : 'con' command is executed.
+01:50:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+con
+----------------End of Script----------------
+
+01:50:19 INFO  : Launch script is exported to file 'C:\cose321\Assignment-5\class_experiments.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_csd_lab.elf_on_local.tcl'
+01:51:43 INFO  : Disconnected from the channel tcfchan#15.
+01:53:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:53:31 INFO  : Jtag cable 'Digilent Zed 210248A39B69' is selected.
+01:53:31 INFO  : 'jtag frequency' command is executed.
+01:53:31 INFO  : Sourcing of 'C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:53:31 INFO  : Context for 'APU' is selected.
+01:53:31 INFO  : System reset is completed.
+01:53:34 INFO  : 'after 3000' command is executed.
+01:53:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39B69" && level==0} -index 1' command is executed.
+01:53:38 INFO  : FPGA configured successfully with bitstream "C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/soc_wrapper.bit"
+01:53:38 INFO  : Context for 'APU' is selected.
+01:53:38 INFO  : Hardware design information is loaded from 'C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/system.hdf'.
+01:53:38 INFO  : Context for 'APU' is selected.
+01:53:39 INFO  : 'ps7_init' command is executed.
+01:53:39 INFO  : 'ps7_post_config' command is executed.
+01:53:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:53:39 INFO  : The application 'C:/cose321/Assignment-5/class_experiments.sdk/csd_lab/Debug/csd_lab.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:53:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39B69" && level==0} -index 1
+fpga -file C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/soc_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+loadhw C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+dow C:/cose321/Assignment-5/class_experiments.sdk/csd_lab/Debug/csd_lab.elf
+----------------End of Script----------------
+
+01:53:39 INFO  : Memory regions updated for context APU
+01:53:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:53:40 INFO  : 'con' command is executed.
+01:53:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+con
+----------------End of Script----------------
+
+01:53:40 INFO  : Launch script is exported to file 'C:\cose321\Assignment-5\class_experiments.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_csd_lab.elf_on_local.tcl'
+01:54:28 INFO  : Disconnected from the channel tcfchan#16.
+01:54:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:54:47 INFO  : Jtag cable 'Digilent Zed 210248A39B69' is selected.
+01:54:47 INFO  : 'jtag frequency' command is executed.
+01:54:47 INFO  : Sourcing of 'C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:54:47 INFO  : Context for 'APU' is selected.
+01:54:47 INFO  : System reset is completed.
+01:54:50 INFO  : 'after 3000' command is executed.
+01:54:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39B69" && level==0} -index 1' command is executed.
+01:54:54 INFO  : FPGA configured successfully with bitstream "C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/soc_wrapper.bit"
+01:54:54 INFO  : Context for 'APU' is selected.
+01:54:54 INFO  : Hardware design information is loaded from 'C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/system.hdf'.
+01:54:54 INFO  : Context for 'APU' is selected.
+01:54:55 INFO  : 'ps7_init' command is executed.
+01:54:55 INFO  : 'ps7_post_config' command is executed.
+01:54:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:54:56 INFO  : The application 'C:/cose321/Assignment-5/class_experiments.sdk/csd_lab/Debug/csd_lab.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:54:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39B69" && level==0} -index 1
+fpga -file C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/soc_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+loadhw C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+dow C:/cose321/Assignment-5/class_experiments.sdk/csd_lab/Debug/csd_lab.elf
+----------------End of Script----------------
+
+01:54:56 INFO  : Memory regions updated for context APU
+01:54:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:54:56 INFO  : 'con' command is executed.
+01:54:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+con
+----------------End of Script----------------
+
+01:54:56 INFO  : Launch script is exported to file 'C:\cose321\Assignment-5\class_experiments.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_csd_lab.elf_on_local.tcl'
+01:56:34 INFO  : Disconnected from the channel tcfchan#17.
+01:57:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:57:31 INFO  : Jtag cable 'Digilent Zed 210248A39B69' is selected.
+01:57:31 INFO  : 'jtag frequency' command is executed.
+01:57:31 INFO  : Sourcing of 'C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:57:31 INFO  : Context for 'APU' is selected.
+01:57:31 INFO  : System reset is completed.
+01:57:34 INFO  : 'after 3000' command is executed.
+01:57:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39B69" && level==0} -index 1' command is executed.
+01:57:38 INFO  : FPGA configured successfully with bitstream "C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/soc_wrapper.bit"
+01:57:38 INFO  : Context for 'APU' is selected.
+01:57:38 INFO  : Hardware design information is loaded from 'C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/system.hdf'.
+01:57:38 INFO  : Context for 'APU' is selected.
+01:57:39 INFO  : 'ps7_init' command is executed.
+01:57:39 INFO  : 'ps7_post_config' command is executed.
+01:57:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:57:40 INFO  : The application 'C:/cose321/Assignment-5/class_experiments.sdk/csd_lab/Debug/csd_lab.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:57:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A39B69" && level==0} -index 1
+fpga -file C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/soc_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+loadhw C:/cose321/Assignment-5/class_experiments.sdk/soc_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+dow C:/cose321/Assignment-5/class_experiments.sdk/csd_lab/Debug/csd_lab.elf
+----------------End of Script----------------
+
+01:57:40 INFO  : Memory regions updated for context APU
+01:57:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:57:40 INFO  : 'con' command is executed.
+01:57:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A39B69"} -index 0
+con
+----------------End of Script----------------
+
+01:57:40 INFO  : Launch script is exported to file 'C:\cose321\Assignment-5\class_experiments.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_csd_lab.elf_on_local.tcl'
+01:58:47 INFO  : Disconnected from the channel tcfchan#18.
