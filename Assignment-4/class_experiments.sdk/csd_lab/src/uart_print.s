@@ -38,13 +38,14 @@ uart_trans_init:
 
 TRANSMIT_loop:
 
+	// check to see if the Tx FIFO is empty
 	ldr r3, [r1]
 	and r3, r3, #0x8
 	cmp r3, #0x8
 	bne TRANSMIT_loop
 
 	ldrb r4, [r2], #1
-	strb r4, [r0]
+	strb r4, [r0]			// fill the Tx FIFO
 	cmp r4, #0x00
 	bne TRANSMIT_loop
 

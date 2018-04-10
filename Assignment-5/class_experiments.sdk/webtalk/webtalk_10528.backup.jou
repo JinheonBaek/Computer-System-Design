@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
+# 
+# Start of session at: Wed Aug 30 15:47:54 2017
+# Process ID: 10528
+# Current directory: C:/Users/suhtw/Documents/KU/ESCA/teaching/aaa621_CSD/labs/aaa_soc/class_experiments/class_experiments.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/Users/suhtw/Documents/KU/ESCA/teaching/aaa621_CSD/labs/aaa_soc/class_experiments/class_experiments.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/suhtw/Documents/KU/ESCA/teaching/aaa621_CSD/labs/aaa_soc/class_experiments/class_experiments.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

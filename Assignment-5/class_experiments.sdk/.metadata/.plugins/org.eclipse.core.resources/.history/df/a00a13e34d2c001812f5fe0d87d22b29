@@ -1,0 +1,100 @@
+
+#define csd_LED_ADDR	0x41200000
+
+.extern csd_main
+
+.align 8
+
+// Our interrupt vector table
+csd_entry:
+	b csd_reset
+	b .
+	b .
+	b .
+	b .
+	b .
+	b csd_irq
+	b .
+
+.global main
+csd_reset:
+main:
+
+	mov r0, #4			// init outer loop count value
+	mov r1, #0			// init inner loop count value
+
+	ldr r2, =Input_data		// init pointer of Input_data for outer loop
+	ldr r3, =Input_data		// init pointer of Input_data for inner loop
+
+	eor r4, r4, r4		// init outer loop value
+	eor r5, r5, r5		// init inner loop value
+	eor r6, r6, r6		// init temporary variable for swap
+
+outer:
+	subs r0, r0, #1		// r0 = r0 - 1 & update nzcv flags
+	beq save			// if r0 equals 0, sorting is end
+
+	eor r1, r1, r1		// init inner loop count before enter loop
+	ldr r4, [r2], #4	// load outer loop value from memory
+
+	ldr r3, =Input_data		// init pointer of Input_data for inner loop
+
+inner:
+
+	cmp r0, r1
+	beq outer
+
+	add r1, r1, #1
+
+	ldr r5, [r3], #4
+
+	bl swap
+
+	b inner
+
+	//ldr r3, [r0], #4   // load a word into r3 and upate r0 (= r0 + 4)
+	//str r3, [r1], #4   // store the word to memory and upate r1 (= r1 + 4)
+	//subs r2, r2, #1
+	//bne  loop
+
+ 	//ldr r0, =csd_LED_ADDR
+	//mov r1, #0x5
+	//str r1, [r0]
+
+	//bl csd_main
+
+swap:
+	mov r6, r4
+	mov r4, r5
+	mov r5, r6
+	mov pc, lr
+
+save:
+	ldr r0, =Input_data
+	ldr r1, =Output_data
+
+	ldr r0, [r0]
+	str r0, [r1]
+
+forever:
+	nop
+	b forever
+
+
+.data
+.align 4
+Input_data:
+	.word  2, 0, -7, -1, 3, 8, -4, 10
+	//.word -9, -16, 15, 13, 1, 4, -3, 14
+	//.word -8, -10, -15, 6, -13, -5, 9, 12
+	//.word -11, -14, -6, 11, 5, 7, -2, -12
+
+Output_data:
+	.word 0, 0, 0, 0, 0, 0, 0, 0
+	//.word 0, 0, 0, 0, 0, 0, 0, 0
+	//.word 0, 0, 0, 0, 0, 0, 0, 0
+	//.word 0, 0, 0, 0, 0, 0, 0, 0
+
+// Normal Interrupt Service Routine
+csd_irq:
+	b .

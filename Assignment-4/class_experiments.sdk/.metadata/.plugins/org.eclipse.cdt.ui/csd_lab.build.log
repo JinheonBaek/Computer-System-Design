@@ -1,23 +1,8 @@
-15:46:16 **** Auto Build of configuration Debug for project csd_lab ****
+16:35:01 **** Incremental Build of configuration Debug for project csd_lab ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-Building file: ../src/csd_asm.S
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/csd_asm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../csd_lab_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/csd_asm.d" -MT"src/csd_asm.o" -o "src/csd_asm.o" "../src/csd_asm.S"
-Finished building: ../src/csd_asm.S
- 
-Building target: csd_lab.elf
-Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../csd_lab_bsp/ps7_cortexa9_0/lib -o "csd_lab.elf"  ./src/csd_asm.o ./src/csd_main.o ./src/uart_init.o ./src/uart_print.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-Finished building target: csd_lab.elf
- 
-Invoking: ARM v7 Print Size
-arm-none-eabi-size csd_lab.elf  |tee "csd_lab.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  20292	   1556	  22568	  44416	   ad80	csd_lab.elf
-Finished building: csd_lab.elf.size
- 
+make: `main-build'를 위해 할 일이 없습니다
 
-15:46:19 Build Finished (took 2s.375ms)
+16:35:02 Build Finished (took 866ms)
 
