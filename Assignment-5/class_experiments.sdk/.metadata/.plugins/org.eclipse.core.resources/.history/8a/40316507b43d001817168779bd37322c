@@ -63,8 +63,6 @@ inner:
 	cmp r4, r5			// compare loaded two values
 	blgt swap			// if left side value is greater than right side value, swap two values
 
-	debug_macro
-
 	b inner
 
 swap:

@@ -61,9 +61,8 @@ inner:
 	ldr r5, [r3], #4	// load Input data on the right side
 
 	cmp r4, r5			// compare loaded two values
+	// debug_macro			// after compare loaded two values (to check swap is needed), run debug_macro
 	blgt swap			// if left side value is greater than right side value, swap two values
-
-	debug_macro
 
 	b inner
 

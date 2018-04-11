@@ -4,6 +4,7 @@
 	// save register from r0 to r12 to stack
 	stmfd sp!, {r0-r12}
 
+
 	/////////////////////////////////////////////////////////////////////
 	/// stmfd ~ msr 까지 존재하는 이유										/////
 	///	1) cpsr 을 안전하게 보관하기 위해										/////
@@ -23,11 +24,12 @@
     bl reg_push
 
 	ldr r1, =macro_reg_space
-	ldmia r1, {r0}				// load cpsr value to r0 register from macro_reg_space
+	ldmia r1!, {r0}				// load cpsr value to r0 register from macro_reg_space
     msr cpsr, r0				// save cpsr value to cpsr register
 
     // load register from r0 ro r12
     ldmfd sp!, {r0-r12}
+    mov r0, #0x0001
 .endm
 
 // push all registers (r0-r15 and CPSR) to stack
@@ -181,6 +183,7 @@ reg_pop_one:
 
 	// if iteration end, return to original routine (at the point call macro program)
     cmp r1, #0
+    moveq r0, #0x0F
     moveq pc, lr
 
 	//	if iteration does not end, return to reg_pop_one

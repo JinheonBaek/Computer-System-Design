@@ -110,3 +110,22 @@ dismissDialog("Launch SDK"); // bt:g (cd:JFrame)
 // [GUI Memory]: 111 MB (+282kb) [01:17:44]
 // [GUI Memory]: 117 MB (+130kb) [01:33:05]
 // HMemoryUtils.trashcanNow. Engine heap size: 588 MB. GUI used memory: 74 MB. Current time: 4/12/18 1:54:27 AM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 588 MB. GUI used memory: 74 MB. Current time: 4/12/18 2:24:28 AM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 588 MB. GUI used memory: 63 MB. Current time: 4/12/18 2:54:28 AM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 588 MB. GUI used memory: 52 MB. Current time: 4/12/18 3:24:29 AM KST
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 7000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 8000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 5000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 6000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 9000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 7000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 8000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 9000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 10000 ms.

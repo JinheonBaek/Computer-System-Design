@@ -23,7 +23,7 @@
     bl reg_push
 
 	ldr r1, =macro_reg_space
-	ldmia r1, {r0}				// load cpsr value to r0 register from macro_reg_space
+	ldmia r1!, {r0}				// load cpsr value to r0 register from macro_reg_space
     msr cpsr, r0				// save cpsr value to cpsr register
 
     // load register from r0 ro r12
