@@ -1,3 +1,5 @@
 1523377433764	Delete resource 'csd_lab/src/platform_config.h'
 1523377443487	Delete resource 'csd_lab/src/platform.c'
 1523377450601	Delete resource 'csd_lab/src/platform.h'
+1523461880390	Delete resource 'csd_lab/src/debug_macro_print.S'
+1523462114043	Delete resource 'csd_lab/src/line_print.S'

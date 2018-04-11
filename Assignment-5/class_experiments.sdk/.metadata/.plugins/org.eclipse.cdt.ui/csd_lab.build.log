@@ -1,4 +1,4 @@
-02:21:12 **** Auto Build of configuration Debug for project csd_lab ****
+02:16:45 **** Auto Build of configuration Debug for project csd_lab ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
@@ -20,9 +20,9 @@ Finished building target: csd_lab.elf
 Invoking: ARM v7 Print Size
 arm-none-eabi-size csd_lab.elf  |tee "csd_lab.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  22036	   1428	  22568	  46032	   b3d0	csd_lab.elf
+  22792	   1428	  22568	  46788	   b6c4	csd_lab.elf
 Finished building: csd_lab.elf.size
  
 
-02:21:16 Build Finished (took 3s.887ms)
+02:16:48 Build Finished (took 3s.477ms)
 

@@ -28,16 +28,21 @@ main:
 	mov r0, #32			// init outer loop count value
 	mov r1, #0			// init inner loop count value
 
+	debug_macro			// after init count value, run debug_macro
+
 	ldr r2, =Input_data		// init pointer of Input_data that on the left side when comparing two values
 	ldr r3, =Input_data		// init pointer of Input_data that on the right side when comparing two values
+
+	debug_macro			// after set pointer of Input_data, run debug_macro
 
 	eor r4, r4, r4		// init compared value that on the left side
 	eor r5, r5, r5		// init compared value that on the right side
 
-	debug_macro
+	debug_macro			// after init compared value (equals to 0), run debug_macro
 
 outer:
 	subs r0, r0, #1		// r0 = r0 - 1 & update nzcv flags (to check sorting is end)
+	//debug_macro			// after update nzcv flags (to check sotring is end), run debug_macro
 	beq save			// if r0 equals 0, sorting is end
 
 	eor r1, r1, r1		// init inner loop count before enter inner loop
@@ -56,6 +61,7 @@ inner:
 	ldr r5, [r3], #4	// load Input data on the right side
 
 	cmp r4, r5			// compare loaded two values
+	//debug_macro			// after compare loaded two values (to check swap is needed), run debug_macro
 	blgt swap			// if left side value is greater than right side value, swap two values
 
 	b inner
@@ -68,14 +74,22 @@ swap:
 save:
 	ldr r0, =Input_data
 	ldr r1, =Output_data
+	debug_macro				// after init Input_data & Output_data, run debug_macro
 
 	ldmia r0!, {r2-r9}
+	debug_macro				// after saving first 8 bits in memory, run debug_macro
 	stmia r1!, {r2-r9}
+
 	ldmia r0!, {r2-r9}
+	debug_macro				// after saving second 8 bits in memory, run debug_macro
 	stmia r1!, {r2-r9}
+
 	ldmia r0!, {r2-r9}
+	debug_macro				// after saving third 8 bits in memory, run debug_macro
 	stmia r1!, {r2-r9}
+
 	ldmia r0!, {r2-r9}
+	debug_macro				// after saving forth 8 bits in memory, run debug_macro
 	stmia r1!, {r2-r9}
 
 forever:
