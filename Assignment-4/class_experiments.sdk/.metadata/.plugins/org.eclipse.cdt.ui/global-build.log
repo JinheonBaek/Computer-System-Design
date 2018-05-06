@@ -119,3 +119,8 @@ make pre-build main-build
 a9-linaro-pre-build-step
  
 make: `main-build'를 위해 할 일이 없습니다
+00:40:16 **** Incremental Build of configuration Debug for project csd_lab ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다

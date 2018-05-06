@@ -1,0 +1,62 @@
+
+#pragma GCC target ("thumb")
+
+void thumb_C_test()
+{
+	int indata[32] = { 2, 0, -7, -1, 3, 8, -4, 10, -9, -16, 15, 13, 1, 4, -3, 14, -8, -10, -15, 6, -13, -5, 9, 12, -11, -14, -6, 11, 5, 7, -2, -12 };
+
+	int outdata[32];
+
+	int temp;
+
+	for (int i = 0; i < 32; i++)
+	{
+		for (int j = 0; j < 31 - i; j++)
+		{
+			if (indata[j] > indata[j+1])
+			{
+				temp = indata[j];
+				indata[j] = indata[j+1];
+				indata[j+1] = temp;
+			}
+		}
+	}
+
+	for (int i = 0; i < 32; i++)
+		outdata[i] = indata[i];
+
+	return;
+}
+
+
+#pragma GCC target ("arm")
+
+void arm_C_test()
+{
+	int indata[32] = { 2, 0, -7, -1, 3, 8, -4, 10, -9, -16, 15, 13, 1, 4, -3, 14, -8, -10, -15, 6, -13, -5, 9, 12, -11, -14, -6, 11, 5, 7, -2, -12 };
+	indata[0] = 2; indata[1] = 0; indata[2] = -7; indata[3] = -1; indata[4] = 3; indata[5] = 8; indata[6] = -4; indata[7] = 10;
+	indata[8] = 2; indata[9] = 2; indata[10] = 2; indata[11] = 2; indata[12] = 2; indata[13] = 2; indata[14] = 2; indata[15] = 2;
+	indata[16] = 2; indata[17] = 2; indata[18] = 2; indata[19] = 2; indata[20] = 2; indata[21] = 2; indata[22] = 2; indata[23] = 2;
+	indata[24] = 2; indata[25] = 2; indata[26] = 2; indata[27] = 2; indata[28] = 2; indata[29] = 2; indata[30] = 2; indata[31] = 2;
+	int outdata[32];
+
+	int temp;
+
+	for (int i = 0; i < 32; i++)
+	{
+		for (int j = 0; j < 31 - i; j++)
+		{
+			if (indata[j] > indata[j+1])
+			{
+				temp = indata[j];
+				indata[j] = indata[j+1];
+				indata[j+1] = temp;
+			}
+		}
+	}
+
+	for (int i = 0; i < 32; i++)
+		outdata[i] = indata[i];
+
+	return;
+}
