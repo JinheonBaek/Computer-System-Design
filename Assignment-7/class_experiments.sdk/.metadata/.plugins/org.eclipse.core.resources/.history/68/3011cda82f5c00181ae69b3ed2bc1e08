@@ -1,0 +1,57 @@
+.macro uart_print
+
+	bleq uart_trans_init
+
+.endm
+
+//////////////////////////////////////////////
+//		reference error : clean project		//
+//////////////////////////////////////////////
+
+#include "uart_regs.h"
+
+uart_trans_init:
+
+	ldr r0, =uart_TX_RX_FIFO0
+	ldr r1, =uart_Channel_sts_reg0
+	ldr r2, =timer_space
+
+	//ldrb r3, [r2, #5]
+	//add r3, r3, #1
+	//strb r3, [r2, #5]
+
+TRANSMIT_loop:
+
+	// check to see if the Tx FIFO is empty
+	ldr r3, [r1]
+	and r3, r3, #0x8
+	cmp r3, #0x8
+	bne TRANSMIT_loop
+
+	ldrb r4, [r2], #1
+	strb r4, [r0]			// fill the Tx FIFO
+	cmp r4, #0x00
+	bne TRANSMIT_loop
+
+	mov pc, lr
+
+.data
+timer_space:
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x08
+	.byte 0x30
+	.byte 0x30
+	.byte 0x3A
+	.byte 0x30
+	.byte 0x30
+	.byte 0x3A
+	.byte 0x30
+	.byte 0x30
+	.byte 0x00
+.text
