@@ -1,25 +1,8 @@
-23:22:59 **** Auto Build of configuration Debug for project csd_lab ****
+23:59:11 **** Incremental Build of configuration Debug for project csd_lab ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/csd_asm.S'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/csd_asm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../csd_lab_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/csd_asm.d" -MT"src/csd_asm.o" -o "src/csd_asm.o" "../src/csd_asm.S"
-'Finished building: ../src/csd_asm.S'
-' '
-'Building file: ../src/uart_print.s'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/uart_print.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../csd_lab_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/uart_print.d" -MT"src/uart_print.o" -o "src/uart_print.o" "../src/uart_print.s"
-'Finished building: ../src/uart_print.s'
-' '
-'Building target: csd_lab.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../csd_lab_bsp/ps7_cortexa9_0/lib -o "csd_lab.elf"  ./src/csd_asm.o ./src/csd_main.o ./src/uart_init.o ./src/uart_print.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-./src/uart_print.o: In function `TRANSMIT_loop':
-C:\cose321\Assignment-7\class_experiments.sdk\csd_lab\Debug/../src/uart_print.s:15: undefined reference to `uart_TX_RX_FIFO0'
-C:\cose321\Assignment-7\class_experiments.sdk\csd_lab\Debug/../src/uart_print.s:16: undefined reference to `uart_Channel_sts_reg0'
-collect2.exe: error: ld returned 1 exit status
-make: *** [csd_lab.elf] 오류 1
+make: `main-build'를 위해 할 일이 없습니다
 
-23:23:04 Build Finished (took 5s.480ms)
+23:59:12 Build Finished (took 682ms)
 
