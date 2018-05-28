@@ -54,7 +54,7 @@ forever:
 	@------------------------
 	ldrne r0, =L2_reg1_ctrl
     movne r1, #0x0
-    strne r0, [r0]
+    strne r1, [r0]
 	@------------------------
 	@ Disable Caches (IL1, DL1)
 	@------------------------
@@ -68,7 +68,7 @@ forever:
 	@------------------------
 	ldreq r0, =L2_reg1_ctrl
     moveq r1, #0x1
-    streq r0, [r0]
+    streq r1, [r0]
 
 	@------------------------
 	@ Enable Caches (IL1, DL1)
