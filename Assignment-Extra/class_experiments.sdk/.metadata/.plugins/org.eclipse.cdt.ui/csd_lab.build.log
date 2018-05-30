@@ -1,4 +1,4 @@
-20:32:34 **** Auto Build of configuration Debug for project csd_lab ****
+21:32:49 **** Auto Build of configuration Debug for project csd_lab ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -19,5 +19,5 @@ arm-none-eabi-size csd_lab.elf  |tee "csd_lab.elf.size"
 'Finished building: csd_lab.elf.size'
 ' '
 
-20:32:35 Build Finished (took 1s.143ms)
+21:32:51 Build Finished (took 1s.251ms)
 

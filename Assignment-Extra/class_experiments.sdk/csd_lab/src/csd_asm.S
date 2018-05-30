@@ -190,43 +190,46 @@ csd_irq:
   	ldr r0, =GICC_EOIR
 	str r3, [r0]
 
+	ldr r0, =task_stack_top
+	ldr r1, [r0]
+
+	// Task 1
+	cmp r1, #0x0
+	addeq r1, r1, #1
+	streq r1, [r0]
+
+	ldreq r0, =usr1_stack_top
+	stmeq r0, {r0-r12, lr}^
+
+	ldreq r0, =usr2_stack_top
+	ldmeq r0, {r0-r12, lr}^
+
+	// Task 2
+	cmp r1, #0x1
+	addeq r1, r1, #1
+	streq r1, [r0]
+
+	ldreq r0, =usr2_stack_top
+	stmeq r0, {r0-r12, lr}^
+
+	ldreq r0, =usr3_stack_top
+	ldmeq r0, {r0-r12, lr}^
+
+	// Task 3
+	cmp r1, #0x2
+	moveq r1, #0x0
+	streq r1, [r0]
+
+	ldreq r0, =usr3_stack_top
+	stmeq r0, {r0-r12, lr}^
+
+	ldreq r0, =usr1_stack_top
+	ldmeq r0, {r0-r12, lr}^
+
 	ldmfd sp!, {r0-r12, lr}
 
 	subs pc, lr, #4
 
-
-
-	// subs pc, lr, #4
-
-	// Load which task we should take
-	ldr r0, =task_stack_top
-	ldr r1, [r0]
-
-	// Task #1
-	cmp r1, #0x0			// We take task #1 ?
-	// addeq r1, r1, #1		// If we take task #1, next is task #2
-	streq r1, [r0]			// Save next task info into stack
-
-
-
-	beq task1_c
-
-	// Task #2
-	cmp r1, #0x1			// We take task #2 ?
-	addeq r1, r1, #1		// If we take task #2, next is task #3
-	streq r1, [r0]			// Save next task info into stack
-
-	// beq task2_c
-
-	// Task #3
-	cmp r1, #0x2			// We take task #3 ?
-	moveq r1, #0			// If we take task #3, next is task #1
-	streq r1, [r0]			// Save next task info into stack
-
-	// beq task3_c
-
-	// ldmfd sp!, {r0-r12, lr}
-    // subs pc, lr, #4
 
 csd_fiq:
 	b .
