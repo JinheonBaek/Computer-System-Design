@@ -1,4 +1,4 @@
-21:32:49 **** Auto Build of configuration Debug for project csd_lab ****
+23:58:55 **** Auto Build of configuration Debug for project csd_lab ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -15,9 +15,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size csd_lab.elf  |tee "csd_lab.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  77544	   9840	  33968	 121352	  1da08	csd_lab.elf
+  77800	  10848	  33968	 122616	  1def8	csd_lab.elf
 'Finished building: csd_lab.elf.size'
 ' '
 
-21:32:51 Build Finished (took 1s.251ms)
+23:58:56 Build Finished (took 1s.612ms)
 
