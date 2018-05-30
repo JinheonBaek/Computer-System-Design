@@ -10,7 +10,7 @@ int csd_main()
 	unsigned int * sw;
 	sw = (unsigned *)0x41210000;
 
-	long long epoch = 0x500000;
+	long long epoch = 0x300000;
 
 	for (int i = 0; i < epoch; i++);
 
